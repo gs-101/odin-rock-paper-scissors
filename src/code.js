@@ -12,6 +12,8 @@ const lossMessagePrefix = "You lose!";
 const paperWinMessage = "Paper covers rock.";
 /** Message shown in case of rock victory. */
 const rockWinMessage = "Rock breaks the scissors.";
+/** Message shown in case of scissors victory. */
+const scissorsWinMessage = "Scissors cut the paper.";
 
 /** Returns a pseudorandom int between 0 and a chosen maximum MAX. Works in a
  exclusive manner. */
@@ -84,8 +86,8 @@ function getPaperResult(computerChoice) {
         console.log(tieMessage);
         break;
     case "scissors":
-        console.log(`${lossMessagePrefix} Scissors cut the paper.`);
-        computerChoice++;
+        console.log(`${lossMessagePrefix} ${scissorsWinMessage}.`);
+        computerScore++;
         break;
     }
 }
