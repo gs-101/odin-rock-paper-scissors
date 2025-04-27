@@ -91,3 +91,21 @@ function getPaperResult(computerChoice) {
         break;
     }
 }
+
+/** Returns the result of the game in case the user chooses "scissors". Uses
+ COMPUTERCHOICE for comparison. */
+function getScissorsResult(computerChoice) {
+    switch (computerChoice) {
+    case "rock":
+        console.log(`${lossMessagePrefix} ${rockWinMessage}`)
+        computerScore++;
+        break;
+    case "paper":
+        console.log(`${winMessagePrefix} ${scissorsWinMessage}`);
+        humanScore++;
+        break;
+    case "scissors":
+        console.log(`${tieMessage}`);
+        break;
+    }
+}
