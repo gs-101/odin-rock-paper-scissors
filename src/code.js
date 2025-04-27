@@ -13,6 +13,7 @@ function getRandom(max) {
  used to represent the adversary's choice in the game. */
 function getComputerChoice() {
     let randomNumber = getRandom(3);
+    const error = new RangeError("Unexpected value, must be between 0 and 2.");
 
     switch (randomNumber) {
     // break; is not needed because the function ends after the return.
@@ -23,7 +24,7 @@ function getComputerChoice() {
     case 2:
         return "scissors";
     default:
-        throw new RangeError("Unexpected value, must be between 0 and 2.");
+        throw error;
     }
 }
 
