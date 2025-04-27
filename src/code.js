@@ -42,3 +42,22 @@ function normalize(humanChoice) {
 
     return humanChoice;
 }
+
+/** Returns the result of the game in case the user chooses "rock". Uses
+ COMPUTERCHOICE for comparison. */
+function getRockResult(computerChoice) {
+    switch (computerChoice) {
+    case "rock":
+        console.log("A tie! Nobody wins.");
+        break;
+    case "paper":
+        console.log("You lose! Paper covers rock.");
+        computerScore++;
+        break;
+    case "scissors":
+        console.log("You win! Rock breaks the scissors.");
+        humanScore++;
+        break;
+    }
+    // No "default" case is needed, all inputs have already been checked.
+}
