@@ -21,3 +21,10 @@ function getComputerChoice() {
         throw new RangeError("Unexpected value, must be between 0 and 2.");
     }
 }
+
+/** Asks the user for input and returns it. */
+function getHumanChoice() {
+    let choice = prompt("Your move:");
+
+    return choice;
+}
