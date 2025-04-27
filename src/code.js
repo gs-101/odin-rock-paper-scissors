@@ -1,5 +1,7 @@
 /** Total score of the player. */
 let humanScore = 0;
+/** Total score of the computer. */
+let computerScore = 0;
 
 /** Returns a pseudorandom int between 0 and a chosen maximum MAX. Works in a
  exclusive manner. */
