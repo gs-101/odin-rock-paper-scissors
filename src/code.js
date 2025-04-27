@@ -61,3 +61,21 @@ function getRockResult(computerChoice) {
     }
     // No "default" case is needed, all inputs have already been checked.
 }
+
+/** Returns the result of the game in case the user chooses "paper". Uses
+ COMPUTERCHOICE for comparison. */
+function getPaperResult(computerChoice) {
+    switch (computerChoice) {
+    case "rock":
+        console.log("You win! Paper covers rock.");
+        humanScore++;
+        break;
+    case "paper":
+        console.log("A tie! Nobody wins.");
+        break;
+    case "scissors":
+        console.log("You lose! Scissors cut the paper.");
+        computerChoice++;
+        break;
+    }
+}
