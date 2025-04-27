@@ -4,6 +4,12 @@ let humanScore = 0;
 let computerScore = 0;
 /** Message in case of ties. */
 const tieMessage = "A tie! Nobody wins.";
+/** Starting statement in case of a victory. */
+const winMessagePrefix = "You win!";
+/** Starting statement in case of defeat. */
+const lossMessagePrefix = "You lose!";
+/** Message shown in case of paper victory. */
+const paperWinMessage = "Paper covers rock.";
 
 /** Returns a pseudorandom int between 0 and a chosen maximum MAX. Works in a
  exclusive manner. */
@@ -53,11 +59,11 @@ function getRockResult(computerChoice) {
         console.log(tieMessage);
         break;
     case "paper":
-        console.log("You lose! Paper covers rock.");
+        console.log(`${lossMessagePrefix} ${paperWinMessage}`);
         computerScore++;
         break;
     case "scissors":
-        console.log("You win! Rock breaks the scissors.");
+        console.log(`${winMessagePrefix} Rock breaks the scissors`);
         humanScore++;
         break;
     }
@@ -69,14 +75,14 @@ function getRockResult(computerChoice) {
 function getPaperResult(computerChoice) {
     switch (computerChoice) {
     case "rock":
-        console.log("You win! Paper covers rock.");
+        console.log(`${winMessagePrefix} ${paperWinMessage}`)
         humanScore++;
         break;
     case "paper":
         console.log(tieMessage);
         break;
     case "scissors":
-        console.log("You lose! Scissors cut the paper.");
+        console.log(`${lossMessagePrefix} Scissors cut the paper.`);
         computerChoice++;
         break;
     }
