@@ -2,6 +2,8 @@
 let humanScore = 0;
 /** Total score of the computer. */
 let computerScore = 0;
+/** Message in case of ties. */
+const tieMessage = "A tie! Nobody wins.";
 
 /** Returns a pseudorandom int between 0 and a chosen maximum MAX. Works in a
  exclusive manner. */
@@ -48,7 +50,7 @@ function normalize(humanChoice) {
 function getRockResult(computerChoice) {
     switch (computerChoice) {
     case "rock":
-        console.log("A tie! Nobody wins.");
+        console.log(tieMessage);
         break;
     case "paper":
         console.log("You lose! Paper covers rock.");
@@ -71,7 +73,7 @@ function getPaperResult(computerChoice) {
         humanScore++;
         break;
     case "paper":
-        console.log("A tie! Nobody wins.");
+        console.log(tieMessage);
         break;
     case "scissors":
         console.log("You lose! Scissors cut the paper.");
