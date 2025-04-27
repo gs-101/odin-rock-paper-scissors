@@ -34,3 +34,11 @@ function getHumanChoice() {
 
     return choice;
 }
+
+/** Returns a version of the user's inputs compatible with the casing used
+throughout the codebase—which is none, there is no casing. */
+function normalize(humanChoice) {
+    humanChoice = humanChoice.toLocaleLowerCase().trim();
+
+    return humanChoice;
+}
