@@ -109,3 +109,24 @@ function getScissorsResult(computerChoice) {
         break;
     }
 }
+
+/** Plays the game for a single round, getting the results from the previous
+functions. If the user's input is not one of the valid ones, viz. "rock",
+"paper", "scissors", they are prompted again. */
+function playRound(humanChoice, computerChoice) {
+    humanChoice = normalize(humanChoice);
+    const warning = `Unexpected choice, must be either "rock", "paper" or
+ "scissors". Try again.`;
+
+    switch (humanChoice) {
+    case "rock":
+        return getRockResult(computerChoice);
+    case "paper":
+        return getPaperResult(computerChoice);
+    case "scissors":
+        return getScissorsResult(computerChoice);
+    default:
+        console.log(warning);
+        playRound(getHumanChoice(), computerChoice);
+    }
+}
