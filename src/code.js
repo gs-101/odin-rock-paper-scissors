@@ -130,3 +130,25 @@ function playRound(humanChoice, computerChoice) {
         playRound(getHumanChoice(), computerChoice);
     }
 }
+
+/** Plays the game for a totality of 5 rounds, declaring the winner at the end. */
+function playGame() {
+    const error = new RangeError("Unexpected game result");
+    const gameWinMessage = "Game over. You win!";
+    const gameLossMessage = "Game over. You lost!"
+
+    for (let i = 1; i <= 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+
+        playRound(humanChoice, computerChoice);
+    }
+
+    if (humanScore > computerScore) {
+        console.log(gameWinMessage);
+    } else if (humanScore < computerScore) {
+        console.log(gameLossMessage);
+    } else {
+        console.log(error);
+    }
+}
