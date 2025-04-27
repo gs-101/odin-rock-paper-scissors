@@ -10,6 +10,8 @@ const winMessagePrefix = "You win!";
 const lossMessagePrefix = "You lose!";
 /** Message shown in case of paper victory. */
 const paperWinMessage = "Paper covers rock.";
+/** Message shown in case of rock victory. */
+const rockWinMessage = "Rock breaks the scissors.";
 
 /** Returns a pseudorandom int between 0 and a chosen maximum MAX. Works in a
  exclusive manner. */
@@ -63,7 +65,7 @@ function getRockResult(computerChoice) {
         computerScore++;
         break;
     case "scissors":
-        console.log(`${winMessagePrefix} Rock breaks the scissors`);
+        console.log(`${winMessagePrefix} ${rockWinMessage}`);
         humanScore++;
         break;
     }
