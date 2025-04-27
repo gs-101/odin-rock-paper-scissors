@@ -25,6 +25,7 @@
           packages = with pkgs; [
             git
             vscode-langservers-extracted
+            typescript-language-server
           ];
         };
       });
