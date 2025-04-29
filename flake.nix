@@ -23,6 +23,7 @@
       devShells = forAllSystems ({ pkgs, ... }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
+            eslint
             git
             vscode-langservers-extracted
             typescript-language-server
