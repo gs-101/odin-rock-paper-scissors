@@ -23,6 +23,7 @@
       devShells = forAllSystems ({ pkgs, ... }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
+            biome
             eslint
             git
             vscode-langservers-extracted
